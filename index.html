@@ -1,61 +1,108 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SINA EROGUL</title>
-<link rel="stylesheet" href="https://use.typekit.net/ndg1wso.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SINA EROGUL</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ndg1wso.css">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body{
-    background:#fff;
-    color:#111;
-    font-family: "owners-xwide", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-}
+    :root {
+      --background: #fcf8be;
+      --text: #102926;
+    }
 
-main{
-    text-align:center;
-    padding:40px;
-}
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--background);
+      color: var(--text);
+    }
 
-h1{
-    font-size:60px;
-    font-weight:500;
-    margin-bottom:16px;
-}
+    body {
+      min-height: 100svh;
+      font-family: "scale-variable", sans-serif;
+      display: grid;
+      place-items: center;
+    }
 
-p{
-    color:#666;
-    font-size:20px;
-    margin-bottom:32px;
-}
+    main {
+      width: min(92vw, 1200px);
+      text-align: center;
+      transform: translateY(8vh);
+    }
 
-a{
-    color:#111;
-    text-decoration:none;
-    font-size:18px;
-}
-</style>
+    h1 {
+      font-family: "scale-variable", sans-serif;
+      font-variation-settings: "wdth" 125, "wght" 700;
+      font-size: clamp(3.6rem, 9.1vw, 8.9rem);
+      line-height: 0.78;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: clamp(1.05rem, 1.7vw, 1.65rem);
+      font-family: "scale-variable", sans-serif;
+      font-variation-settings: "wdth" 125, "wght" 400;
+      font-size: clamp(1.8rem, 3.6vw, 4.7rem);
+      line-height: 1;
+      color: var(--text);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: opacity 180ms ease;
+    }
+
+    a:hover,
+    a:focus-visible {
+      opacity: 0.72;
+    }
+
+    a:focus-visible {
+      outline: 3px solid currentColor;
+      outline-offset: 0.2em;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        width: 94vw;
+        transform: translateY(4vh);
+      }
+
+      h1 {
+        font-size: clamp(2.55rem, 12.4vw, 5rem);
+      }
+
+      a {
+        font-size: clamp(1.35rem, 7vw, 2.7rem);
+      }
+    }
+
+    @media (max-width: 380px) {
+      h1 {
+        font-size: 11vw;
+      }
+
+      a {
+        font-size: 6.25vw;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<main>
-<h1>SINA EROGUL</h1>
-
-<a href="mailto:hi@sinaerogul.com">
-hi@sinaerogul.com
-</a>
-
-</main>
-
+  <main aria-label="Kontakt">
+    <h1>SINA EROGUL</h1>
+    <a href="mailto:hi@sinaerogul.com">hi@sinaerogul.com</a>
+  </main>
 </body>
 </html>
